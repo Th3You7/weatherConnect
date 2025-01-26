@@ -1,0 +1,126 @@
+@use "../abstracts/" as *;
+
+aside {
+  display: block;
+  overflow: scroll;
+  // desgin scroll
+  background-color: $bg-color;
+
+  @include lg {
+    flex: 0 1 calc(((100% - 2rem) / 100) * 40);
+    margin-top: 2rem;
+    overflow: hidden;
+    & > .container {
+      padding-left: 0 !important;
+    }
+  }
+  .aside {
+    @include lg {
+      width: 100%;
+      background-color: $card-bg-color;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    &__navigation {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        @include lg {
+          gap: 1.5rem !important;
+        }
+      }
+    }
+    &__body {
+      display: flex;
+      align-items: center;
+      //justify-content: center;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      @include lg {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      @include lg {
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0 !important;
+        width: 100%;
+      }
+      &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5;
+        @include lg {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          gap: 1rem;
+        }
+        & > img {
+          height: 4rem;
+          width: 4rem;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          p {
+            color: $primary-color;
+          }
+        }
+      }
+      &-time {
+        color: $primary-color;
+      }
+      &-desc {
+        color: $primary-color;
+      }
+      &-right {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        @include lg {
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+      }
+      &-temp-value {
+        display: flex;
+        align-items: start;
+        .temp-value {
+          font-size: 2.8rem;
+          color: $primary-color;
+        }
+        span:nth-of-type(2) {
+          color: $secondary-color;
+          font-size: 1rem;
+        }
+      }
+      &-other-value {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      &-wind,
+      &-humidity {
+        color: $secondary-color;
+      }
+    }
+  }
+}

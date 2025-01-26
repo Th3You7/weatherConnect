@@ -29,7 +29,7 @@
             <span>
               <i class="fa-solid fa-location-dot"></i>
             </span>
-            <p>Rabat, Maroc</p>
+            <p id="current_location">Rabat, Maroc</p>
           </div>
           <div class="navbar__search">
             <input type="text" placeholder="Search location" />
@@ -82,102 +82,183 @@
     </nav>
     <!-- End Navigation-->
     <!-- Start Body-->
-    <main class="body">
-      <div class="container">
-        <!-- Start Current Temp Card -->
-        <div class="weather-temp card">
-          <div class="weather-temp__top">
-            <div class="weather-temp__title-time">
-              <p class="weather-temp__title">Current Weather</p>
-              <h5 class="weather-temp__time">2:59PM</h5>
-            </div>
-            <div class="weather-temp__option">
-              <button>
-                <span>Forenheight</span>
-                <span><i class="fa-solid fa-angle-down"></i></span>
-              </button>
-            </div>
-          </div>
-          <div class="weather-temp__body">
-            <div class="weather-temp__value-icon">
-              <img src="icons/cloudy-day-1.svg" alt="" />
-              <div>
-                <span class="value">12</span>
-                <span>F</span>
+    <div class="main">
+      <main class="body">
+        <div class="container">
+          <!-- Start Current Temp Card -->
+          <div class="weather-temp card">
+            <div class="weather-temp__top">
+              <div class="weather-temp__title-time">
+                <p class="weather-temp__title">Current Weather</p>
+                <h5 id="current_time" class="weather-temp__time">2:59PM</h5>
+              </div>
+              <div class="weather-temp__option">
+                <button>
+                  <span>Forenheight</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </button>
               </div>
             </div>
-            <div class="weather-temp__status">
-              <p>Rainy</p>
-              <p>Feels Like 35</p>
+            <div class="weather-temp__body">
+              <div class="weather-temp__value-icon">
+                <img src="icons/cloudy-day-1.svg" alt="" />
+                <div>
+                  <span id="curren_temp" class="value">12</span>
+                  <span>C</span>
+                </div>
+              </div>
+              <div class="weather-temp__status">
+                <p id="desc">Rainy</p>
+                <p id="feels_like">Feels Like 35</p>
+              </div>
+            </div>
+            <div class="weather-temp__desc">
+              <p>There will be mostly sunny skies. The high will be 35</p>
             </div>
           </div>
-          <div class="weather-temp__desc">
-            <p>There will be mostly sunny skies. The high will be 35</p>
-          </div>
-        </div>
-        <!-- End Current Temp Card -->
-        <!-- Start current Weather-->
-        <div class="weather-params">
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-brands fa-cloudversify"></i>
-            </span>
-            <div>
-              <p>Air Quality</p>
-              <h5>156</h5>
+          <!-- End Current Temp Card -->
+          <!-- Start current Weather-->
+          <div class="weather-params">
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-brands fa-cloudversify"></i>
+              </span>
+              <div>
+                <p>Air Quality</p>
+                <h5>156</h5>
+              </div>
+            </div>
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-solid fa-wind"></i>
+              </span>
+              <div>
+                <p>Wind</p>
+                <h5 id="wind">1 mph</h5>
+              </div>
+            </div>
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-solid fa-droplet"></i>
+              </span>
+              <div>
+                <p>Humidity</p>
+                <h5 id="humidity">54%</h5>
+              </div>
+            </div>
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-regular fa-eye"></i>
+              </span>
+              <div>
+                <p>Visibility</p>
+                <h5 id="visibility">3 mi</h5>
+              </div>
+            </div>
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-solid fa-p"></i>
+              </span>
+              <div>
+                <p>Pressure</p>
+                <h5 id="pressure">27.65 in</h5>
+              </div>
+            </div>
+            <div class="weather-params__card card">
+              <span>
+                <i class="fa-solid fa-p"></i>
+              </span>
+              <div>
+                <p>Pressure</p>
+                <h5>27.65 in</h5>
+              </div>
             </div>
           </div>
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-solid fa-wind"></i>
-            </span>
-            <div>
-              <p>Wind</p>
-              <h5>1 mph</h5>
-            </div>
-          </div>
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-solid fa-droplet"></i>
-            </span>
-            <div>
-              <p>Humidity</p>
-              <h5>54%</h5>
-            </div>
-          </div>
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-regular fa-eye"></i>
-            </span>
-            <div>
-              <p>Visibility</p>
-              <h5>3 mi</h5>
-            </div>
-          </div>
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-solid fa-p"></i>
-            </span>
-            <div>
-              <p>Pressure</p>
-              <h5>27.65 in</h5>
-            </div>
-          </div>
-          <div class="weather-params__card card">
-            <span>
-              <i class="fa-solid fa-p"></i>
-            </span>
-            <div>
-              <p>Pressure</p>
-              <h5>27.65 in</h5>
-            </div>
-          </div>
-        </div>
 
-        <!-- End current weather-->
-      </div>
-    </main>
-    <!-- End Body-->
-    <!---->
+          <!-- End current weather-->
+        </div>
+      </main>
+      <!-- End Body-->
+      <!--Start Aside-->
+      <aside>
+        <div class="container">
+          <div class="aside">
+            <div class="aside__navigation">
+              <div>
+                <button>Today</button>
+                <button>Tomorow</button>
+                <button>10 days</button>
+              </div>
+              <div>
+                <button class="primary_btn">Monthly Cast</button>
+              </div>
+            </div>
+            <div class="aside__body">
+              <div class="aside__card card">
+                <div class="aside__card-left">
+                  <img src="icons/rainy-6.svg" />
+                  <div>
+                    <p class="aside__card-time">1AM</p>
+                    <p class="aside__card-desc">Mostly Cloudy</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="aside__card-right">
+                  <div class="aside__card-temp-value">
+                    <span class="temp-value">12</span>
+                    <span>F</span>
+                  </div>
+                  <div class="aside__card-other-value">
+                    <p class="aside__card-wind">Wind: 120km</p>
+                    <p class="aside__card-humidity">Humidity: 50%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="aside__card card">
+                <div class="aside__card-left">
+                  <img src="icons/rainy-6.svg" />
+                  <div>
+                    <p class="aside__card-time">1AM</p>
+                    <p class="aside__card-desc">Mostly Cloudy</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="aside__card-right">
+                  <div class="aside__card-temp-value">
+                    <span class="temp-value">12</span>
+                    <span>F</span>
+                  </div>
+                  <div class="aside__card-other-value">
+                    <p class="aside__card-wind">Wind: 120km</p>
+                    <p class="aside__card-humidity">Humidity: 50%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="aside__card card">
+                <div class="aside__card-left">
+                  <img src="icons/rainy-6.svg" />
+                  <div>
+                    <p class="aside__card-time">1AM</p>
+                    <p class="aside__card-desc">Mostly Cloudy</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="aside__card-right">
+                  <div class="aside__card-temp-value">
+                    <span class="temp-value">12</span>
+                    <span>F</span>
+                  </div>
+                  <div class="aside__card-other-value">
+                    <p class="aside__card-wind">Wind: 120km</p>
+                    <p class="aside__card-humidity">Humidity: 50%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!--End Aside-->
+    </div>
   </body>
 </html>

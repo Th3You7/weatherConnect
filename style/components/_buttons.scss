@@ -1,1 +1,10 @@
-
+.primary_btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #0c182a;
+  gap: 0.54rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}

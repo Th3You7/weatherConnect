@@ -5,6 +5,12 @@ main {
   flex-direction: column;
   padding: 2rem 0;
   gap: 1rem;
+  @include lg {
+    flex: 0 1 calc(((100% - 2rem) / 100) * 60);
+    & > .container {
+      padding-right: 0 !important;
+    }
+  }
   .weather-temp {
     display: flex;
     flex-direction: column;
@@ -89,7 +95,7 @@ main {
     gap: 2rem;
     flex-wrap: wrap;
     &__card {
-      flex: 0 1 46.5%;
+      flex: 0 1 calc((100% - 2rem) / 2);
       display: flex;
       align-items: start;
       gap: 1rem;
@@ -113,7 +119,7 @@ main {
         font-size: 1.5rem;
       }
       @include lg {
-        flex: 0 1 31.5%;
+        flex: 0 1 calc((100% - 4rem) / 3);
       }
     }
   }

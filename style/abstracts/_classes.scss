@@ -1,8 +1,18 @@
 @use "variables" as *;
+@use "media-query" as *;
 
 .card {
   display: block;
   border-radius: 1rem;
   background: $card-bg-color;
   padding: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  @include lg {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
