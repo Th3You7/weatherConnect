@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+//  Container
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+  @include md {
+    max-width: 720px;
+  }
+  @include lg {
+    max-width: 100%;
+  }
+}

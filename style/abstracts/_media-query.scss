@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+//  Mixin for media query
+@mixin xl {
+  @media #{$mqTerm} and ($bp-xl) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media #{$mqTerm} and ($bp-lg) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media #{$mqTerm} and ($bp-md) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media #{$mqTerm} and ($bp-sm) {
+    @content;
+  }
+}

@@ -1,0 +1,155 @@
+@use "../abstracts/" as *;
+// style navbar
+.navbar {
+  padding: 0.5rem 0;
+  background: $card-bg-color;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo-toggle {
+    display: flex;
+    gap: 1rem;
+    @include xl {
+      gap: 2rem;
+    }
+    & > #logo {
+      color: #0e7cfe;
+      font: {
+        size: 1.5rem;
+        weight: 700;
+      }
+      @include lg {
+        font-size: 2rem;
+        gap: 1.25rem;
+      }
+    }
+  }
+  &__menu-toggle {
+    span > i {
+      color: $para-color;
+      font-size: 1.2rem;
+      @include xl {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__location {
+    display: none;
+    color: $primary-color;
+    @include lg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      span i {
+        font-size: 1.5rem;
+      }
+      p > {
+        color: $para-color;
+      }
+    }
+    @include xl {
+      gap: 1rem;
+    }
+  }
+  &__search {
+    flex: 0 1 35%;
+    & input {
+      width: 100%;
+      color: $primary-color;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background: transparent;
+      box-sizing: border-box;
+      border: {
+        color: $secondary-color;
+        width: 0.5px;
+        style: solid;
+        radius: 8px;
+      }
+      @include lg {
+        padding: 0.75rem;
+      }
+    }
+    @include lg {
+      flex: 0 1 25%;
+    }
+    @include xl {
+      flex: 0 1 30%;
+    }
+  }
+  &__theme {
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+  &__theme-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: $card-bg-color;
+    background: $primary-color;
+    gap: 0.54rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    @include xl {
+      gap: 1rem;
+    }
+  }
+  &__settings-notif {
+    display: flex;
+    gap: 0.5rem;
+    & > button {
+      display: flex;
+      //padding: 0.75rem 0.5rem;
+      color: $primary-color;
+      & > span i {
+        font-size: 1.5rem;
+      }
+      @include lg {
+        padding: 0.75rem 0.5rem;
+      }
+    }
+    @include xl {
+      gap: 1.5rem;
+    }
+  }
+  &__settings-icon {
+    display: none !important;
+    @include lg {
+      display: block !important;
+    }
+  }
+  &__profile {
+    display: flex;
+  }
+  &__profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+    gap: 1.2rem;
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    & img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+    }
+    p,
+    span {
+      display: none;
+      @include lg {
+        display: block;
+      }
+    }
+  }
+}

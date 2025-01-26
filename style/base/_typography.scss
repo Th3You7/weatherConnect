@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+html {
+  font-size: 16px; // !1rem = 16px;
+}
+
+body {
+  font: {
+    size: 1rem;
+    family: sans-serif;
+    weight: 400;
+  }
+
+  height: auto;
+  @include lg {
+    height: 100vh;
+  }
+  background-color: $bg-color;
+}

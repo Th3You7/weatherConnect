@@ -4,8 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect Weather</title>
+    <link rel="stylesheet" href="style/style.min.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/13885aca87.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script/index.min.js"></script>
   </head>
   <body>
-    <h1>Hello Word</h1>
+    <!-- Start Navigation-->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__content">
+          <div class="navbar__logo-toggle">
+            <button class="navbar__menu-toggle">
+              <span>
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </button>
+            <a href="#" id="logo">Weather</a>
+          </div>
+          <div class="navbar__location">
+            <span>
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <p>Rabat, Maroc</p>
+          </div>
+          <div class="navbar__search">
+            <input type="text" placeholder="Search location" />
+          </div>
+          <div class="navbar__theme">
+            <button class="navbar__theme-btn">
+              <span><i class="fa-regular fa-sun"></i></span>
+              <span>Light</span>
+            </button>
+          </div>
+          <div class="navbar__settings-notif">
+            <button class="navbar__settings-icon">
+              <span class="">
+                <i class="fa-solid fa-gear"></i>
+              </span>
+            </button>
+            <button class="navbar__notif-icon">
+              <span class="">
+                <i class="fa-regular fa-bell"></i>
+              </span>
+            </button>
+          </div>
+          <div class="navbar__profile">
+            <button class="navbar__profile-button">
+              <div>
+                <img src="icons/avatar.svg" alt="user profile picture" />
+                <p>Youness El basiri</p>
+              </div>
+              <span><i class="fa-solid fa-angle-down"></i></span>
+            </button>
+          </div>
+          <!-- <div class="navbar__navigation">
+            <ul class="navbar__navigation-menu">
+              <li class="navbar__navigation-item">
+                <a>Home</a>
+              </li>
+              <li class="navbar__navigation-item">
+                <a>About us</a>
+              </li>
+              <li class="navbar__navigation-item">
+                <a>product</a>
+              </li>
+              <li class="navbar__navigation-item">
+                <a>Features</a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation-->
+    <div class="body"></div>
   </body>
 </html>
