@@ -4,11 +4,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const locationElement = document.getElementById("current_location");
   const hmdty = document.getElementById("humidity");
   const wind = document.getElementById("wind");
-  const pressure = document.getElementById("pressure");
+  const press = document.getElementById("pressure");
   const desc = document.getElementById("desc");
   const fl = document.querySelector("#feels_like");
-  const current_temp = document.getElementById("current_temp");
-  const visibility = document.getElementById("visibility");
+  const current_temp = document.getElementById("curren_temp");
+  const visib = document.getElementById("visibility");
   //const search = document.getElementById("search");
   const search = document.querySelector("input");
 
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const CITY_KEY = "dfsW0xUYVKmmyY6Jv3L90A==hwN5XzX4xnuiEvSl";
 
   const weatherApi = (lat, lon) =>
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
 
   const locationApi = (name) => `https://www.api-ninjas.com/api/${name}`;
 
@@ -138,13 +138,14 @@ window.addEventListener("DOMContentLoaded", () => {
         weather,
         main: { temp, pressure, sea_level, feels_like, humidity },
       } = data;
-      console.log(speed, feels_like);
       wind.textContent = speed;
       //pressure.textContent = pressure;
       fl.textContent = `Feels like ${feels_like}`;
       hmdty.textContent = humidity;
       desc.textContent = weather[0].description;
+      visib.textContent = visibility;
       current_temp.textContent = temp;
+      press.textContent = pressure;
     } catch (error) {}
   }
 
