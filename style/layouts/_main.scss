@@ -1,0 +1,120 @@
+@use "../abstracts/" as *;
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 1rem;
+  .weather-temp {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+    &__title-time {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    &__title {
+      color: $para-color;
+    }
+    &__time {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $primary-color;
+    }
+    &__option {
+      & > button {
+        display: flex;
+        gap: 0.5rem;
+        span {
+          font-size: 1rem;
+          color: $para-color;
+        }
+      }
+    }
+    &__body {
+      display: flex;
+      gap: 2rem;
+    }
+    &__value-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //gap: 0.5rem;
+      & > img {
+        height: 5rem;
+        width: 5rem;
+      }
+      & > div {
+        display: flex;
+        gap: 0.2rem;
+        align-items: start;
+        span {
+          font-size: 1.5rem;
+          color: $secondary-color;
+        }
+        & > .value {
+          font: {
+            size: 3rem;
+            weight: 300;
+          }
+          color: $primary-color;
+        }
+      }
+    }
+    &__status {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      & > p:first-of-type {
+        color: $secondary-color;
+      }
+      & > p:nth-of-type(2) {
+        color: $primary-color;
+      }
+    }
+    &__desc {
+      color: $primary-color;
+    }
+  }
+  .weather-params {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    &__card {
+      flex: 0 1 46.5%;
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        & > p {
+          color: $secondary-color;
+        }
+        & > h5 {
+          color: $primary-color;
+          font: {
+            size: 2rem;
+            weight: 700;
+          }
+        }
+      }
+      span i {
+        color: $primary-color;
+        font-size: 1.5rem;
+      }
+      @include lg {
+        flex: 0 1 31.5%;
+      }
+    }
+  }
+}

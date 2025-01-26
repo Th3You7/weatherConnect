@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+.card {
+  display: block;
+  border-radius: 1rem;
+  background: $card-bg-color;
+  padding: 2rem;
+}
